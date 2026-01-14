@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * Version information for local_question_import
+ * Version information for local_questions_importer_ws
  *
- * @package    local_question_import
+ * @package    local_questions_importer_ws
  * @copyright  2026 Andrea Bertelli <andrea.bertelli@unife.it>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'local_question_import';
-$plugin->name      = 'Question Web Service Import';
-$plugin->version   = 2026011401; // AAAAMMGGXX.
-$plugin->requires  = 2022111800;
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.0';
+$plugin->component = 'local_questions_importer_ws';
+$plugin->name = 'Questions Web Service Importer';
+$plugin->version = 2026011404; // AAAAMMGGXX.
+$plugin->requires = 2024100700;
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = '1.0';

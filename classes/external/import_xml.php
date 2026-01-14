@@ -13,7 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-namespace local_question_import\external;
+namespace local_questions_importer_ws\external;
 defined('MOODLE_INTERNAL') || die();
 
 require_once("{$CFG->libdir}/externallib.php");
@@ -33,7 +33,7 @@ use question_bank;
 
 /**
  * Question XML Import External API
- * @package    local_question_import
+ * @package    local_questions_importer_ws
  * @copyright  2026 Andrea Bertelli <andrea.bertelli@unife.it>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -67,7 +67,7 @@ class import_xml extends external_api {
 
         $context = context_course::instance($params['courseid']);
         self::validate_context($context);
-        require_capability('local/question_import:import', $context);
+        require_capability('local/questions_importer_ws:import', $context);
 
         $datagenerator = new \testing_data_generator();
         $qgenerator = $datagenerator->get_plugin_generator('core_question');
@@ -77,7 +77,7 @@ class import_xml extends external_api {
         $files = $fs->get_area_files($usercontext->id, 'user', 'draft', $params['draftitemid'], 'id DESC', false);
 
         if (empty($files)) {
-            throw new moodle_exception('filenotfound', 'local_question_import');
+            throw new moodle_exception('filenotfound', 'local_questions_importer_ws');
         }
 
         $xmlcontent = reset($files)->get_content();
@@ -109,7 +109,7 @@ class import_xml extends external_api {
             $transaction->allow_commit();
         } catch (\Exception $e) {
             $transaction->rollback($e);
-            throw new moodle_exception('errorimporting', 'local_question_import', '', $e->getMessage());
+            throw new moodle_exception('errorimporting', 'local_questions_importer_ws', '', $e->getMessage());
         }
 
         return [

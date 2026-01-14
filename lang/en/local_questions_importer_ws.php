@@ -15,15 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Language strings for local_question_import
+ * Language strings for local_questions_importer_ws
  *
- * @package    local_question_import
+ * @package    local_questions_importer_ws
  * @copyright  2026 Andrea Bertelli <andrea.bertelli@unife.it>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $string['pluginname'] = 'Question Web Service Import';
-$string['local_question_import:import'] = 'Import questions via Web Service';
 $string['nocategory'] = 'Could not find a valid category for this course.';
 $string['filenotfound'] = 'Draft file not found. Please upload the file first.';
-$string['question_import:import'] = 'Import questions via Web Service';
+$string['questions_importer_ws:import'] = 'Import questions via Web Service';
 $string['errorimporting'] = 'Error during XML import';

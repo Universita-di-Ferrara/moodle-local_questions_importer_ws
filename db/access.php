@@ -16,14 +16,14 @@
 
 /**
  * Define capabilities.
- * @package    local_question_import
+ * @package    local_questions_importer_ws
  * @copyright  2026 Andrea Bertelli <andrea.bertelli@unife.it>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = [
-    'local/question_import:import' => [
+    'local/questions_importer_ws:import' => [
         'captype' => 'write',
         'contextlevel' => CONTEXT_COURSE,
         'archetypes' => [
