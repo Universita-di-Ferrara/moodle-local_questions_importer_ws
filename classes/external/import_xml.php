@@ -129,8 +129,8 @@ class import_xml extends external_api {
         global $DB;
         $categorypath = str_replace('$course$', '', $categorypath);
         $categories = explode('/', trim($categorypath, '/'));
-        $parentid = 0;
-
+        $defaultcategory = question_get_default_category($contextid);
+        $parentid = $defaultcategory->id;
         foreach ($categories as $catname) {
             $catname = trim($catname);
             if (empty($catname)) {
@@ -142,7 +142,6 @@ class import_xml extends external_api {
                 'name' => $catname,
                 'parent' => $parentid,
             ]);
-
             if ($existing) {
                 $parentid = $existing->id;
             } else {

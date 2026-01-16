@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_questions_importer_ws';
 $plugin->name = 'Questions Web Service Importer';
-$plugin->version = 2026011600; // AAAAMMGGXX.
+$plugin->version = 2026011601; // AAAAMMGGXX.
 $plugin->requires = 2024100700;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.1';
+$plugin->release = '1.1.1';
