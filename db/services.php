@@ -13,6 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 /**
  * Web service functions definition for local_questions_importer_ws
  *
@@ -20,12 +21,13 @@
  * @copyright  2026 Andrea Bertelli <andrea.bertelli@unife.it>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 defined('MOODLE_INTERNAL') || die();
 
 $functions = [
     'local_questions_importer_ws_import_xml' => [
         'classname'   => 'local_questions_importer_ws\external\import_xml',
-        'description' => 'Importa domande da un file XML caricato nell\'area draft.',
+        'description' => 'Imports questions from a Moodle XML file into a specified course.',
         'type'        => 'write',
         'ajax'        => true,
     ],

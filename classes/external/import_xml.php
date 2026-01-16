@@ -13,6 +13,7 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 namespace local_questions_importer_ws\external;
 defined('MOODLE_INTERNAL') || die();
 
@@ -38,20 +39,19 @@ use question_bank;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class import_xml extends external_api {
-
     /**
-     * Descrizione dei parametri del metodo
+     * Defines the parameters for the import_xml function
      * @return external_function_parameters
      */
     public static function execute_parameters() {
         return new external_function_parameters([
-            'courseid' => new external_value(PARAM_INT, 'ID del corso di destinazione'),
-            'draftitemid' => new external_value(PARAM_INT, 'ID area draft contenente il file XML'),
+            'courseid' => new external_value(PARAM_INT, 'course id where to import questions'),
+            'draftitemid' => new external_value(PARAM_INT, 'ID area draft containing the XML file'),
         ]);
     }
 
     /**
-     * Esegue l'importazione specifica per il formato XML
+     * Execute the function to import questions from XML
      * @param int $courseid
      * @param int $draftitemid
      * @return array
@@ -119,11 +119,11 @@ class import_xml extends external_api {
     }
 
     /**
-     * Helper per gestire la creazione ricorsiva delle categorie
+     * Creates or retrieves question categories based on the provided path.
      * @param string $categorypath
      * @param int $contextid
      * @param \core_question_generator $qgenerator
-     * @return int ID della categoria finale
+     * @return int category id
      */
     private static function get_or_create_category($categorypath, $contextid, $qgenerator) {
         global $DB;
