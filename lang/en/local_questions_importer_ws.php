@@ -21,8 +21,9 @@
  * @copyright  2026 Andrea Bertelli <andrea.bertelli@unife.it>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'Question Web Service Import';
-$string['nocategory'] = 'Could not find a valid category for this course.';
-$string['filenotfound'] = 'Draft file not found. Please upload the file first.';
-$string['questions_importer_ws:import'] = 'Import questions via Web Service';
 $string['errorimporting'] = 'Error during XML import';
+$string['filenotfound'] = 'Draft file not found. Please upload the file first.';
+$string['nocategory'] = 'Could not find a valid category for this course.';
+$string['pluginname'] = 'Question Web Service Import';
+$string['privacy:metadata'] = 'The Question Web Service Importer plugin does not store any personal data. It only processes question data for import purposes.';
+$string['questions_importer_ws:import'] = 'Import questions via Web Service';
