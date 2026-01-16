@@ -1,7 +1,7 @@
 # Questions Web Service Importer
 
 **Plugin Name:** `local_questions_importer_ws`  
-**Version:** 1.0  
+**Version:** 1.1
 **Moodle Version Required:** 4.5 (2024100700) or later
 
 ## Description
